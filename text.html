@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Testing D3</title>
+</head>
+<body>
+  <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+  'use strict'
+
+  let dataSet = [4, 8, 15, 16, 23]
+
+  // this finds body in DOM, selectAll p (which do not exist yet)
+  // .data counts and parses data values. everything past this point is executed once for each data point
+  // .enter creates new, data-bound elements. This creates new placeholder DOM elements if not enough exist
+  // append
+
+  d3.select("body").selectAll("p")
+    .data(dataSet)
+    .enter()
+    .append("p")
+    .text(d => d) // this will populate data as text
+    .style("color", d => d < 15 ? "red" : "black")
+
+    // .style("color", "red")
+    // .attr works too
+  </script>
+</body>
+</html>

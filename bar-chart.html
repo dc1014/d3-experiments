@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<style>
+div.bar {
+    display: inline-block;
+    width: 20px;
+    height: 75px;   /* We'll override this later */
+    margin-right: 2px;
+    background-color: teal;
+}
+</style>
+<head>
+  <title>Testing D3</title>
+</head>
+<body>
+  <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+  'use strict'
+
+  let dataSet = []
+
+  for (let i = 0; i < 25; i++) dataSet.push(Math.round(Math.random() * 30))
+
+  d3.select("body").selectAll("div")
+    .data(dataSet)
+    .enter()
+    .append("div")
+    .attr("class", "bar")
+    .style("height", d => {
+      let barHeight = d * 5 // scales up by a factor of 5
+      return barHeight + "px"
+    })
+
+  </script>
+</body>
+</html>
