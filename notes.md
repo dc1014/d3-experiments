@@ -60,4 +60,34 @@ But using CSS to apply SVG can be odd, since SVG props are not CSS props. Consid
 
 ### Layer and Drawing
 
-There are no layers or depth
+There are no layers or depth. SVG elements will stack, and code deternmines the depth order. First in code, first in render. All subsequent code/render is on top of previous render.
+
+As a consequence, axes and labels should be added last so they appear in front.
+
+## Managing Transparency
+
+Two methods - use RGB color with alpha, or add opacity
+  -RGBA accepts 0-255 for RGB, and 0.0 - 1.0 for alpha
+
+With RGBA, transparency is applied to fill and stroke separately. Stroke width is some kind of perimeter calling
+
+With opacity, the setting applies to the entire element. This can be used on elements which have RGBA, and the transparencies are multiplied, i.e. opacity x alpha
+
+Can be specified with any D3 style that accepts color
+
+##
+
+All properties of SVG elements are specified as attributes
+
+An ATTRIBUTE is one which has a property/value pairs in an element (oh).
+
+<!-- <element property="value"/> -->
+Hmm, that looks strangely like HTML!
+
+<!-- <p class="eureka"> -->
+
+Therefore, it is possible to use append() and attr() in the capacity to generate images
+
+  - best practice to use variables
+
+
