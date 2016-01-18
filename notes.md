@@ -1,5 +1,7 @@
 # D3 Notes
 
+SOURCE: http://alignedleft.com/tutorials/d3/an-svg-primer
+
 ## Selection
 
 Select an element by Class, ID, or HTML tags
@@ -75,7 +77,7 @@ With opacity, the setting applies to the entire element. This can be used on ele
 
 Can be specified with any D3 style that accepts color
 
-##
+## Drawing SVGS
 
 All properties of SVG elements are specified as attributes
 
@@ -90,4 +92,36 @@ Therefore, it is possible to use append() and attr() in the capacity to generate
 
   - best practice to use variables
 
+You can append the SVGs to the body, then define a svg which will be the base, then create those svgs with binded data, to appended to the body
 
+## Data Types
+
+GUESS WHAT - JAVASCRIPT TYPING
+
+GEO JSON
+
+A formalization of existing Javascript object sytax. Can be used in geographical space, or for shapes and spatial features.
+
+var geodata = {
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 150.1282427, -24.471803 ]
+            },
+            "properties": {
+                "type": "town"
+            }
+        }
+    ]
+};
+
+Listed lon / lat.
+
+## BAR CHARTS YO
+
+D3 has text areas desingated for its data. You can style the text, use padding, etc.
+
+## Scatterplot
