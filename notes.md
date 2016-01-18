@@ -125,3 +125,6 @@ Listed lon / lat.
 D3 has text areas desingated for its data. You can style the text, use padding, etc.
 
 ## Scatterplot
+
+What about going into R^2? 2 Tuples in arrays.
+
