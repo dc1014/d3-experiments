@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<style>
+div.bar {
+    display: inline-block;
+    width: 20px;
+    height: 75px;   /* We'll override this later */
+    margin-right: 2px;
+    background-color: teal;
+}
+</style>
+<head>
+  <title>Testing D3</title>
+</head>
+<body>
+  <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    'use strict'
+
+    const dataset = [100,200,300,400,500] // input domain
+
+    // output range..? Up to me.
+
+    const scale = d3.scale.linear()
+      .domain([100, 500])
+      .domain([10, 350])
+
+    scales(2.5) // returns 2.5
+
+
+
+
+
+  </script>
+</body>
+</html>
